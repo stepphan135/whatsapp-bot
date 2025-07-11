@@ -162,7 +162,6 @@ Setelah itu pindai kode QR menggunakan WhatsApp Anda di ponsel Anda!
 
 |        Other        | Availability |
 | :-----------------: | :----------: |
-| Say                 |      ✔️      |
 | Lyric finder        |      ✔️      |
 | Shortlink maker     |      ✔️      |
 | Wikipedia           |      ✔️      |
