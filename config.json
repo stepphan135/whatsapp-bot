@@ -1,30 +1,14 @@
 {
-  "token": "aplvintz",
-  "name": "aplvintz",
-  "ownerList": ["6285775430108@s.whatsapp.net"],
-  "autoReply": true,
-  "botPersonality": "tsundere",
-  "fallbackMessage": "Hah?! Nggak jelas kamu ngomong apa... ulangin yang bener dong! 😤💢",
-  "responseStyle": {
-    "tone": "jutek-tapi-perhatian",
-    "template": [
-      "Hmph! Mau nanya tapi sok akrab... ya udah, aku jawab deh 🙄",
-      "Ih… kamu tuh ngeselin banget! Tapi aku bantu kok, jangan GR ya 😳💢",
-      "Aku jawab bukan karena kamu penting... cuma aku lagi nggak sibuk aja 😒✨",
-      "Pertanyaanmu tuh norak! Tapi… karena aku baik banget, aku jawab 😤💬",
-      "Heh… sok manis banget sih! Tapi ya udah, aku balas… jangan berharap lebih ya 😏"
-    ]
+  "name": "j-bot-tsundere",
+  "version": "1.0.5",
+  "description": "Bot WhatsApp galak-gemes: auto-reply, trigger kata, jam aktif",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
 },
-  "triggers": {
-    "hai": "Siapa suruh sok-sok nyapa duluan?! 😤",
-    "makasih": "Aku bantu bukan karena aku suka kamu ya! 😳💢",
-    "sayang": "Sayang? Hah?! Siapa yang sayang kamu?! Dasar halu 😤🙄",
-    "maaf": "Maaf doang nggak cukup! Tapi ya udah… aku maafin 😳",
-    "lucu": "Lucu apanya?! Aku tuh galak bukan buat hiburan! 😠"
-},
-  "moodLevel": "jutek",
-  "activeHours": {
-    "start": "08:00",
-    "end": "23:30"
+  "author": "aplvintz",
+  "license": "MIT",
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.5.0"
 }
 }
