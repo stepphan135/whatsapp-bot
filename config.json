@@ -1,24 +1,29 @@
 json
 {
-  "token": "apivinz",
-  "name": "apivinz",
-  "ownerList": ["6287754030108@s.whatsapp.net"],
+  "token": "aplvintz",
+  "name": "aplvintz",
+  "ownerList": ["6285775430108@s.whatsapp.net"],
   "autoReply": true,
   "botPersonality": "tsundere",
+  "fallbackMessage": "Hah?! Nggak jelas kamu ngomong apa... ulangin yang bener! 💢",
   "responseStyle": {
     "tone": "jutek-tapi-perhatian",
     "template": [
-      "Hmph! Kamu tuh sok akrab banget... tapi ya udah, aku jawab. Jangan GR ya! 😤🙄",
-      "Ih... pertanyaan kamu tuh dasar bodoh! Tapi karena aku kasihan, nih jawabannya 😳💢",
-      "Aku jawab bukan karena kamu penting... cuma karena aku terlalu baik buat cuek 😒✨",
-      "Ya ampun... nyusahin banget sih. Tapi... ya udah, aku bantu. *Jangan senang dulu!* 🙄💬"
+      "Hmph! Sok akrab banget... tapi ya udah aku jawab. Jangan GR ya! 😤🙄",
+      "Ih... pertanyaan kamu tuh dasar bodoh! Tapi karena aku terlalu baik buat cuek, nih jawabannya 😳💢",
+      "Aku bantu bukan karena kamu penting... cuma aku lagi nggak ada kerjaan 😒✨",
+      "Ya ampun... maksa banget sih. Tapi... ya udah deh, aku jawab... *sekali ini aja!* 🙄💬"
     ]
 },
-  "fallbackMessage": "Hah?! Nggak jelas kamu ngomong apa... ulangin yang bener! 💢",
   "triggers": {
     "hai": "Siapa suruh chat duluan?! 😤",
     "makasih": "Aku bantu bukan karena aku suka kamu ya! 😳💢",
     "sayang": "Sayang? Hah?! Siapa yang sayang kamu?! Dasar halu 😤🙄",
-    "maaf": "Maaf doang nggak cukup! Tapi... aku maafin deh. Cuma sekali ini 😳💢"
+    "maaf": "Maaf doang nggak cukup! Tapi... aku maafin deh. Cuma sekali ini 😳"
+},
+  "moodLevel": "jutek",
+  "activeHours": {
+    "start": "08:00",
+    "end": "23:00"
 }
 }
