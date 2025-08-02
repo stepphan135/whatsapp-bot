@@ -52,10 +52,12 @@ async function startBot() {
 }
 }
 
-    if (config.autoReply) {
-      const templates = config.responseStyle?.template || []
-      const reply = templates[Math.floor(Math.random() * templates.length)]
+    const templates = config.responseStyle?.template || []
+    const reply = templates[Math.floor(Math.random() * templates.length)]
+    if (config.autoReply && reply) {
       await sock.sendMessage(sender, { text: reply}, { quoted: msg})
+} else {
+      await sock.sendMessage(sender, { text: config.fallbackMessage}, { quoted: msg})
 }
 })
 }
