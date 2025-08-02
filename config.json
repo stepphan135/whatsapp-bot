@@ -1,4 +1,19 @@
+json
 {
-  "token": "your-token-here",
-  "nao": "put-your-token-here",
+  "token": "apivinz",
+  "nao": "apivinz",
+  "ownerList": ["6287754033010@s.whatsapp.net"],
+  "autoReply": true,
+  "botPersonality": "tsundere",
+  "responseStyle": {
+    "tone": "jutek-tapi-perhatian",
+    "template": [
+      "Ih, ngeselin banget sih... ya udah sini aku jawab 😤",
+      "Aku jawab bukan karena aku peduli ya! 🙄",
+      "Dasar bodoh... tapi nih jawabannya 😒",
+      "Hmph! Jangan sok akrab gitu deh... 😳",
+      "Cuma sekali ini aku bantuin kamu, jangan GR!"
+    ]
+},
+  "fallbackMessage": "Hah?! Nggak jelas kamu ngomong apa... ulangin yang bener! 💢"
 }
