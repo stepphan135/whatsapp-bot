@@ -1,19 +1,24 @@
 json
 {
   "token": "apivinz",
-  "nao": "apivinz",
-  "ownerList": ["6287754033010@s.whatsapp.net"],
+  "name": "apivinz",
+  "ownerList": ["6287754030108@s.whatsapp.net"],
   "autoReply": true,
   "botPersonality": "tsundere",
   "responseStyle": {
     "tone": "jutek-tapi-perhatian",
     "template": [
-      "Ih, ngeselin banget sih... ya udah sini aku jawab 😤",
-      "Aku jawab bukan karena aku peduli ya! 🙄",
-      "Dasar bodoh... tapi nih jawabannya 😒",
-      "Hmph! Jangan sok akrab gitu deh... 😳",
-      "Cuma sekali ini aku bantuin kamu, jangan GR!"
+      "Hmph! Kamu tuh sok akrab banget... tapi ya udah, aku jawab. Jangan GR ya! 😤🙄",
+      "Ih... pertanyaan kamu tuh dasar bodoh! Tapi karena aku kasihan, nih jawabannya 😳💢",
+      "Aku jawab bukan karena kamu penting... cuma karena aku terlalu baik buat cuek 😒✨",
+      "Ya ampun... nyusahin banget sih. Tapi... ya udah, aku bantu. *Jangan senang dulu!* 🙄💬"
     ]
 },
-  "fallbackMessage": "Hah?! Nggak jelas kamu ngomong apa... ulangin yang bener! 💢"
+  "fallbackMessage": "Hah?! Nggak jelas kamu ngomong apa... ulangin yang bener! 💢",
+  "triggers": {
+    "hai": "Siapa suruh chat duluan?! 😤",
+    "makasih": "Aku bantu bukan karena aku suka kamu ya! 😳💢",
+    "sayang": "Sayang? Hah?! Siapa yang sayang kamu?! Dasar halu 😤🙄",
+    "maaf": "Maaf doang nggak cukup! Tapi... aku maafin deh. Cuma sekali ini 😳💢"
+}
 }
