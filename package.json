@@ -1,7 +1,7 @@
 {
   "name": "j-bot-tsundere",
-  "version": "1.0.1",
-  "description": "Bot WhatsApp galak-gemes: auto-reply, trigger kata, jam aktif, mood",
+  "version": "1.0.2",
+  "description": "Bot WhatsApp tsundere auto-reply, trigger kata, jam aktif, mood galak",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
