@@ -1,33 +1,68 @@
-javascript
-const fs = require('fs')
-const { default: makeWASocket, useMultiFileAuthState} = require('@whiskeysockets/baileys')
+js
+const fs = require('fs');
+const { Client} = require('whatsapp-web.js');
+const qrcode = require('qrcode-terminal');
+const config = JSON.parse(fs.readFileSync('./config.json', 'utf-8'));
+const greetingCount = {};
+const logStream = fs.createWriteStream('./chat-log.txt', { flags: 'a'});
 
-const delay = ms => new Promise(res => setTimeout(res, ms))
-let lastReplyTime = 0
+const client = new Client();
 
-function isActiveNow(start, end) {
-  const now = new Date()
-  const currentMinutes = now.getHours() * 60 + now.getMinutes()
-  const [startH, startM] = start.split(':').map(Number)
-  const [endH, endM] = end.split(':').map(Number)
-  const startMinutes = startH * 60 + startM
-  const endMinutes = endH * 60 + endM
-  return currentMinutes>= startMinutes && currentMinutes <= endMinutes
+const getMoodToday = () => {
+  const moods = ['tsundere', 'ngambek', 'lembek', 'galak', 'sok cool'];
+  const today = new Date().getDay(); // 0 = Sunday
+  return moods[today % moods.length];
+};
+
+const getTimeGreeting = () => {
+  const hour = new Date().getHours();
+  if (hour < 10) return 'pagi';
+  if (hour < 16) return 'siang';
+  if (hour < 20) return 'sore';
+  return 'malam';
+};
+
+client.on('qr', qr => qrcode.generate(qr, { small: true}));
+
+client.on('ready', () => {
+  console.log('J-BOT tsundere deluxe aktif... bukan karena aku peduli ya 🙄');
+});
+
+client.on('message', msg => {
+  const text = msg.body.toLowerCase();
+  const sender = msg.from;
+  const mood = getMoodToday();
+  const timeNow = getTimeGreeting();
+
+  // Logging pesan masuk
+  logStream.write(`[${new Date().toLocaleString()}] ${sender}: ${text}\n`);
+
+  greetingCount[sender] = (greetingCount[sender] || 0) + 1;
+  const gCount = greetingCount[sender];
+
+  const { greetings, compliments} = config.triggers;
+  const emoji = config.mood.emoji;
+  const maxGreeting = config.mood.maxGreetingBeforeAngry;
+
+  let reply = '';
+
+  if (greetings.some(g => text.includes(g))) {
+    if (gCount> maxGreeting) {
+      reply = `Nyapa terus tuh ganggu tau! Aku lagi ${mood} ${emoji.angry}`;
+} else {
+      reply = `Selamat ${timeNow}... bukan karena aku mau nyapa balik ya ${emoji.turn}`;
+}
+} else if (compliments.some(c => text.includes(c))) {
+    reply = `APAAN SIH?! Kamu sok tahu... tapi... ya makasih juga sih ${emoji.soft}`;
+} else if (text.includes('ping')) {
+    reply = `PONG! Lagi ${mood}, jangan ganggu aku ${emoji.angry}`;
+} else if (text.includes('apa kabar')) {
+    reply = `Kenapa nanya sih? Tapi aku... baik kok ${emoji.soft}`;
+} else {
+    reply = `Aku lagi ${mood}, gak mood jawab kamu ${emoji.reply}`;
 }
 
-async function startBot() {
-  const config = JSON.parse(fs.readFileSync('./config.json', 'utf-8'))
-  const { state, saveCreds} = await useMultiFileAuthState('./session')
-  const sock = makeWASocket({ auth: state, printQRInTerminal: true})
-  sock.ev.on('creds.update', saveCreds)
+  msg.reply(reply);
+});
 
-  sock.ev.on('messages.upsert', async ({ messages}) => {
-    const msg = messages[0]
-    if (!msg.message || msg.key.fromMe) return
-
-    const sender = msg.key.remoteJid
-    const text = msg.message.conversation || msg.message.extendedTextMessage?.text || ''
-    if (!text.trim()) return
-    if (!isActiveNow(config.activeHours.start, config.activeHours.end)) return
-    if (Date.now() - lastReplyTime < 5000) return
-    lastReplyTime = Date.now()
+client.initialize();
