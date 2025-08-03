@@ -1,4 +1,3 @@
-js
 const fs = require('fs');
 const { Client} = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
@@ -66,3 +65,4 @@ client.on('message', msg => {
 });
 
 client.initialize();
+
