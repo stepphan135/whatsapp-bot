@@ -1,20 +1,16 @@
 {
-  "activeHours": {
+  "activehours": {
     "start": "07:00",
     "end": "23:00"
 },
-  "mood": {
-    "maxGreetingBeforeAngry": 3,
-    "emoji": {
-      "angry": "😤💢",
-      "soft": "👉🏿👈🏿",
-      "turn": "🙄",
-      "reply": "😼"
-}
+  "emoji": {
+    "angry": "😡",
+    "soft": "😊",
+    "turn": "😎",
+    "reply": "👍"
 },
-  "triggers": {
-    "greetings": ["hai", "halo", "hello", "hi", "pagi", "siang", "salam", "hey", "woi"],
-    "compliments": ["ganteng", "cantik", "manis", "imut", "jelek", "galak"]
+  "maxGreetingBeforeAngry": 3,
+  "reply": "👋",
+  "greetings": ["hai", "halo", "hello", "hi", "pagi"],
+  "compliment": ["ganteng", "cantik", "manis", "imut", "jelek", "galak"]
 }
-}
-
