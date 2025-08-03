@@ -1,14 +1,24 @@
+json
 {
-  "name": "j-bot-tsundere",
-  "version": "1.0.5",
-  "description": "Bot WhatsApp galak-gemes: auto-reply, trigger kata, jam aktif",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
+  "activeHours": {
+    "start": "07:00",
+    "end": "23:00"
 },
-  "author": "aplvintz",
-  "license": "MIT",
-  "dependencies": {
-    "@whiskeysockets/baileys": "^6.5.0"
+  "mood": {
+    "maxGreetingBeforeAngry": 3,
+    "emoji": {
+      "angry": "😤💢",
+      "soft": "👉🏿👈🏿",
+      "turn": "🙄",
+      "reply": "😼"
+}
+},
+  "triggers": {
+    "greetings": [
+      "hai", "halo", "hello", "hi", "pagi", "siang", "salam", "hey", "woi"
+    ],
+    "compliments": [
+      "ganteng", "cantik", "manis", "imut", "jelek", "galak"
+    ]
 }
 }
