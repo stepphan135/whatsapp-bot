@@ -1,16 +1,5 @@
 {
-  "activehours": {
-    "start": "07:00",
-    "end": "23:00"
-},
-  "emoji": {
-    "angry": "😡",
-    "soft": "😊",
-    "turn": "😎",
-    "reply": "👍"
-},
-  "maxGreetingBeforeAngry": 3,
-  "reply": "👋",
-  "greetings": ["hai", "halo", "hello", "hi", "pagi"],
-  "compliment": ["ganteng", "cantik", "manis", "imut", "jelek", "galak"]
+  "target": "6287758403301",
+  "reply": "👋 Halo dari J-BOT!",
+  "greetings": ["hai", "hello", "pagi"]
 }
