@@ -2,15 +2,16 @@ json
 {
   "name": "whatsapp-bot",
   "version": "1.0.0",
-  "description": "Bot WhatsApp tsundere galak & ekspresif",
+  "description": "Bot tsundere galak via WhatsApp",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
 },
-  "author": "Boss drama galak legendaris 🙄",
-  "license": "MIT",
   "dependencies": {
-    "whatsapp-web.js": "^1.21.0",
+    "whatsapp-web.js": "^1.20.0",
     "qrcode-terminal": "^0.12.0"
-}
+},
+  "keywords": [],
+  "author": "J-BOT Tsundere",
+  "license": "MIT"
 }
