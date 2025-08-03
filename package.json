@@ -1,7 +1,7 @@
 {
-  "name": "whatsapp-bot",
+  "name": "whatsapp-tsundere-bot",
   "version": "1.0.0",
-  "description": "Bot WhatsApp tsundere galak via WebSocket",
+  "description": "J-BOT galak via WhatsApp tanpa Puppeteer",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
