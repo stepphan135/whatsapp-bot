@@ -1,7 +1,6 @@
 {
-  "name": "whatsapp-tsundere-bot",
+  "name": "jbot-simple",
   "version": "1.0.0",
-  "description": "J-BOT galak via WhatsApp tanpa Puppeteer",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
