@@ -2,12 +2,12 @@ json
 {
   "name": "whatsapp-bot",
   "version": "1.0.0",
-  "description": "Bot WhatsApp tsundere galak & gemes",
+  "description": "Bot WhatsApp tsundere galak & ekspresif",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
 },
-  "author": "Boss galak legendaris 🙄",
+  "author": "Boss drama galak legendaris 🙄",
   "license": "MIT",
   "dependencies": {
     "whatsapp-web.js": "^1.21.0",
