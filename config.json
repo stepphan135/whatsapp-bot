@@ -14,11 +14,7 @@ json
 }
 },
   "triggers": {
-    "greetings": [
-      "hai", "halo", "hello", "hi", "pagi", "siang", "salam", "hey", "woi"
-    ],
-    "compliments": [
-      "ganteng", "cantik", "manis", "imut", "jelek", "galak"
-    ]
+    "greetings": ["hai", "halo", "hello", "hi", "pagi", "siang", "salam", "hey", "woi"],
+    "compliments": ["ganteng", "cantik", "manis", "imut", "jelek", "galak"]
 }
 }
